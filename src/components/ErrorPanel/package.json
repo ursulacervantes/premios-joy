@@ -1,0 +1,6 @@
+{
+  "name": "ErrorPanel",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./ErrorPanel.js"
+}

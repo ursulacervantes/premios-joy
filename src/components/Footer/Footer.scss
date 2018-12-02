@@ -1,0 +1,133 @@
+@import '../../theme.scss';
+
+footer {
+  background: $bone-white;
+  padding-top: 1.5625em;
+  padding-bottom: 5.625em;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  .footer-row {
+    width: 60%;
+  }
+
+  .socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding-bottom: 1.875em;
+
+    a {
+      display: inline-block;
+      vertical-align: top;
+      width: 2.25em;
+      height: 2.25em;
+      margin: 0 1.3125em;
+      position: relative;
+    }
+
+    a:hover,
+    a:focus {
+      color: $tertiary-color;
+    }
+
+    i {
+      line-height: 1em;
+      vertical-align: top;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.25em;
+    }
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a:focus,
+  a:hover {
+    text-decoration: none;
+    color: white;
+  }
+
+  .footer-links {
+    padding: 2.5em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // border-bottom: 1px solid #000;
+    .links-row {
+      display: flex;
+      flex-direction: row;
+      font-size: 14px;
+
+      .link-title {
+        font-weight: 500;
+        margin-bottom: 15px;
+      }
+
+      .link-item {
+        padding: 2px 0;
+
+        a:hover,
+        a:focus {
+          color: $tertiary-color;
+        }
+      }
+
+      .link-column {
+        padding: 0 50px;
+      }
+    }
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    padding-top: 2.1875em;
+  }
+}
+
+@media screen and #{$tablet} {
+  footer {
+    .footer-row {
+      width: 80%;
+    }
+
+    .footer-links {
+      .links-row {
+        .link-column {
+          padding: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and #{$small-mobile} {
+  footer {
+    .footer-row {
+      width: 90%;
+    }
+
+    .footer-links {
+      .links-row {
+        .link-column {
+          font-size: 12px;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}

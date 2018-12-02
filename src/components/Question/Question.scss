@@ -1,0 +1,59 @@
+@import "../../theme";
+
+.root {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 60px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 0 40px;
+  background-color: white;
+  width: 39.375em;
+  max-width: 100%;
+  padding-top: 2.25em;
+  text-align: center;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: $tertiary-color;
+  font-size: 0.9375em;
+  margin: 0;
+  padding: 1.33333em 0;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 1.33333em;
+}
+
+h2 {
+  text-transform: uppercase;
+  color: $tertiary-color;
+  font-size: 0.7375em;
+  margin: 0;
+  padding: 1.33333em 0;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 1.33333em;
+}
+
+
+h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 1.33333em;
+  height: 1px;
+  background: #000;
+  margin-left: -0.66667em;
+  left: 50%;
+}
+
+p {
+  line-height: 1.8em;
+  font-size: 0.9375em;
+  text-align: justify;
+}
