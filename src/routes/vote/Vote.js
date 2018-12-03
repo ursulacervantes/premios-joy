@@ -8,15 +8,13 @@ import s from './Vote.scss';
 
 class Vote extends React.Component {
   static propTypes = {
-    questions: PropTypes.arrayOf(
-      PropTypes.shape({
-        question: PropTypes.string.isRequired,
-        nominees: PropTypes.shape({
-          name: PropTypes.string.isRequired,
-          votes: PropTypes.number.isRequired,
-        }).isRequired,
-      }),
-    ),
+    questions: PropTypes.shape({
+      question: PropTypes.string.isRequired,
+      nominees: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        votes: PropTypes.number.isRequired,
+      }).isRequired,
+    }),
   };
 
   static defaultProps = {
@@ -49,9 +47,9 @@ class Vote extends React.Component {
       <div>
         <div className={s['content-block-section']}>
           <div className={s['content-row']}>
-            <Question
+            {this.props.questions && <Question
               question={this.props.questions[this.state.activeQuestion]}
-            />
+            />}
           </div>
         </div>
       </div>
@@ -59,9 +57,11 @@ class Vote extends React.Component {
   }
 }
 
-// const mapState = state => ({
-//   questions: Object.assign({}, state.service.list),
-// });
+const mapState = state => {
+  return {
+    questions: Object.assign({}, state.poll.list),
+  }
+};
 
-// export default connect(mapState)(withStyles(s)(Vote));
-export default withStyles(s)(Vote);
+export default connect(mapState)(withStyles(s)(Vote));
+// export default withStyles(s)(Vote);

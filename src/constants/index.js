@@ -1,3 +1,4 @@
 /* eslint-disable import/prefer-default-export */
 
-export const GET_SERVICES = 'GET_SERVICES';
+export const GET_POLL = 'GET_POLL';
+export const SET_VOTE = 'SET_VOTE';

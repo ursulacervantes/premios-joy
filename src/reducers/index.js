@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 import { firebaseReducer } from 'react-redux-firebase';
 
-import service from './service';
+import poll from './poll';
 
 export default combineReducers({
-  service,
+  poll,
   firebase: firebaseReducer,
 });

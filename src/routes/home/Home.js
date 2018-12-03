@@ -8,13 +8,13 @@ import history from '../../history';
 import s from './Home.scss';
 
 class Home extends React.Component {
-  static propTypes = {
-    services: PropTypes.shape({
-      lastUpdated: PropTypes.string,
-      serviceName: PropTypes.string,
-      serviceStatus: PropTypes.string,
-    }),
-  };
+  // static propTypes = {
+  //   questions: PropTypes.shape({
+  //     lastUpdated: PropTypes.string,
+  //     serviceName: PropTypes.string,
+  //     serviceStatus: PropTypes.string,
+  //   }),
+  // };
 
   static defaultProps = {
     services: [],
@@ -48,7 +48,7 @@ class Home extends React.Component {
 }
 
 const mapState = state => ({
-  services: Object.assign({}, state.service.list),
+  questions: Object.assign({}, state.questions),
 });
 
 export default connect(mapState)(withStyles(s)(Home));
